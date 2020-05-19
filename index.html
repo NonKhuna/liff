@@ -58,13 +58,17 @@
     }
 
     async function scanCode() {
-      alert("scanqr")
+      alert("new scanqr")
       const result = await liff.scanCode()
-      document.getElementById('scanCode').append(result.value)  
+      document.getElementById('scanCode').append(result.value) 
+      liff.openWindow({
+        url : result.value,
+        external : true
+      }) 
     }
 
     function openWindow() {
-      alert("openwindow")
+      alert("new openwindow")
       liff.openWindow({
         url: "https://nonkhuna.github.io/liff/",
         external : true
