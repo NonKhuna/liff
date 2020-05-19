@@ -54,14 +54,17 @@
     }
 
     function closed() {
+      liff.closeWindow()
     }
 
     async function scanCode() {
+      alert("scanqr")
       const result = await liff.scanCode()
       document.getElementById('scanCodee').append(result.value)  
     }
 
     function openWindow() {
+      alert("openwindow")
       liff.openWindow({
         url: "https://nonkhuna.github.io/liff/",
         external : true
