@@ -57,9 +57,15 @@
     }
 
     async function scanCode() {
+      const result = await liff.scanCode()
+      document.getElementById('scanCodee').append(result.value)  
     }
 
     function openWindow() {
+      liff.openWindow({
+        url: "https://nonkhuna.github.io/liff/",
+        external : true
+      })
     }
 
     async function getFriendship() {
