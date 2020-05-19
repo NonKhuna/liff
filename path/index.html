@@ -8,6 +8,7 @@
 </head>
 <body>
   <h1>Hello World!</h1>
+  <p>version 1</p>
   <p id="param"><b>Query Param: </b></p>
   <img id="pictureUrl">
   <p id="userId"><b>userId:</b> </p>
@@ -19,6 +20,7 @@
     const queryString = decodeURIComponent(window.location.search);
     const params = new URLSearchParams(queryString);
     console.log(params.get("param"))
+    console.log(params.get("ss"))
     document.getElementById("param").append(params.get("param"));
   </script>
 </body>
