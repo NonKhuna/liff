@@ -16,6 +16,7 @@
   <p id="decodedIDToken"><b>email:</b> </p>
   <script>
     // Query Params
+    console.log(window.location.search)
     const queryString = decodeURIComponent(window.location.search);
     const params = new URLSearchParams(queryString);
     document.getElementById("param").append(params.get("param"));
